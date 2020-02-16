@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/customCSS.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/sliderCSS.css') }}">
+
+    <!-- JQuery Libary -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+    <!-- D3 Libary -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <!-- Custom url variable -->
+    <script>
+        var url = "{{url_for('getCountry')}}";
+    </script>
+
+    <!-- Custom JS File -->
+    <script src="{{ url_for('static', filename='js/customJS.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/d3.js') }}"></script>
+
+    <title>{{ title }}</title>
+</head>
+
+<body>
+    {% include 'headerLayout.html' %}
+
+    <div id='content' class='container-fluid bg-white w-75 py-4 px-4 mt-n2'>
+        <h1 class=text-center>Life Expectancy vs Sugar Consumption vs Food Supply</h1>
+        <svg class='ml-1' width='1400' height="500"></svg><br>
+        <input id="slider" type="range" min="1965" max="2013" value="1965" step="1" />
+        <div class="ml-auto mr-auto w-75 text-center display-4"><label id="yearLabel">Year: 1961</label></div>
+    </div>
+
+    {% include 'footerLayout.html' %}
+</body>
+
+</html>

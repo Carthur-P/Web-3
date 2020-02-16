@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
+
+  <!-- Custom CSS File -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/customCSS.css') }}">
+
+  <!-- JQuery Libary -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+
+  <!-- Custom url variable -->
+  <script>
+    var url = "{{url_for('getCountry')}}";
+  </script>
+
+  <!-- Custom JS File -->
+  <script src="{{ url_for('static', filename='js/customJS.js') }}"></script>
+
+  <title>{{ title }}</title>
+</head>
+
+<body>
+  {% include 'headerLayout.html' %}
+
+  <div id="content" class='container-fluid bg-white w-75 py-4 px-4 mt-n2'>
+    <div class='row'>
+      <div class='col-lg-8 col-sm-6 col-6'>
+        <p>Quisque non volutpat tellus, eu mattis lorem. Etiam rhoncus ligula et iaculis sagittis. Nullam ultricies
+          nisl
+          ac neque hendrerit scelerisque. Ut mattis sodales nibh quis pellentesque. Nunc posuere porta
+          maximus. Praesent pharetra rutrum pellentesque. Duis venenatis imperdiet dictum. Nullam posuere eu ligula ac
+          venenatis. Integer maximus id elit sed aliquam. Quisque hendrerit nunc molestie mauris molestie
+          aliquam. Nulla eu lectus et augue tincidunt dapibus eu vitae tortor. Duis mi justo, consectetur at tortor at,
+          mollis laoreet leo. Pellentesque id mauris eget est consequat rutrum ac id justo. Mauris quis mattis
+          nunc. Nulla dictum tellus vitae aliquam efficitur. Cras viverra convallis consequat. Quisque non volutpat
+          tellus, eu mattis lorem. Etiam rhoncus ligula et iaculis sagittis. Nullam ultricies nisl ac neque hendrerit
+          scelerisque. Ut mattis sodales nibh quis pellentesque. Nunc posuere porta
+          maximus. Praesent pharetra rutrum pellentesque. Duis venenatis imperdiet dictum. Nullam posuere eu ligula ac
+          venenatis. Integer maximus id elit sed aliquam. Quisque hendrerit nunc molestie mauris molestie
+          aliquam. Nulla eu lectus et augue tincidunt dapibus eu vitae tortor. Duis mi justo, consectetur at tortor at,
+          mollis laoreet leo. Pellentesque id mauris eget est consequat rutrum ac id justo. Mauris quis mattis
+          nunc. Nulla dictum tellus vitae aliquam efficitur. Cras viverra convallis consequat.</p>
+      </div>
+
+      <div class='col-lg-4 col-sm-6 col-6'>
+        <p>Quisque non volutpat tellus, eu mattis lorem. Etiam rhoncus ligula et iaculis sagittis. Nullam ultricies
+          nisl
+          ac neque hendrerit scelerisque. Ut mattis sodales nibh quis pellentesque. Nunc posuere porta
+          maximus. Praesent pharetra rutrum pellentesque. Duis venenatis imperdiet dictum. Nullam posuere eu ligula ac
+          venenatis. Integer maximus id elit sed aliquam. Quisque hendrerit nunc molestie mauris molestie
+          aliquam. Nulla eu lectus et augue tincidunt dapibus eu vitae tortor. Duis mi justo, consectetur at tortor at,
+          mollis laoreet leo. Pellentesque id mauris eget est consequat rutrum ac id justo. Mauris quis mattis
+          nunc. Nulla dictum tellus vitae aliquam efficitur. Cras viverra convallis consequat.</p>
+      </div>
+    </div>
+
+    <button class="btn btn-dark mx-auto" type="button" data-toggle="collapse" data-target="#hiddenText" aria-expanded="false"
+      aria-controls="multiCollapseExample2">Show More</button>
+  </div>
+
+  <div class='container-fluid w-75 py-4 px-4 mt-n2 collapse multi-collapse' id='hiddenText' style='background-color: #F0F0F0'>
+    <div class='row'>
+      <div class='col-lg-4 col-sm-6 col-6'>
+        <p>Quisque non volutpat tellus, eu mattis lorem. Etiam rhoncus ligula et iaculis sagittis. Nullam ultricies
+          nisl
+          ac neque hendrerit scelerisque. Ut mattis sodales nibh quis pellentesque. Nunc posuere porta
+          maximus. Praesent pharetra rutrum pellentesque. Duis venenatis imperdiet dictum. Nullam posuere eu ligula ac
+          venenatis. Integer maximus id elit sed aliquam. Quisque hendrerit nunc molestie mauris molestie
+          aliquam. Nulla eu lectus et augue tincidunt dapibus eu vitae tortor. Duis mi justo, consectetur at tortor at,
+          mollis laoreet leo. Pellentesque id mauris eget est consequat rutrum ac id justo. Mauris quis mattis
+          nunc. Nulla dictum tellus vitae aliquam efficitur. Cras viverra convallis consequat.</p>
+      </div>
+
+      <div class='col-lg-8 col-sm-6 col-6'>
+        <p>Quisque non volutpat tellus, eu mattis lorem. Etiam rhoncus ligula et iaculis sagittis. Nullam ultricies
+          nisl
+          ac neque hendrerit scelerisque. Ut mattis sodales nibh quis pellentesque. Nunc posuere porta
+          maximus. Praesent pharetra rutrum pellentesque. Duis venenatis imperdiet dictum. Nullam posuere eu ligula ac
+          venenatis. Integer maximus id elit sed aliquam. Quisque hendrerit nunc molestie mauris molestie
+          aliquam. Nulla eu lectus et augue tincidunt dapibus eu vitae tortor. Duis mi justo, consectetur at tortor at,
+          mollis laoreet leo. Pellentesque id mauris eget est consequat rutrum ac id justo. Mauris quis mattis
+          nunc. Nulla dictum tellus vitae aliquam efficitur. Cras viverra convallis consequat. Quisque non volutpat
+          tellus, eu mattis lorem. Etiam rhoncus ligula et iaculis sagittis. Nullam ultricies nisl ac neque hendrerit
+          scelerisque. Ut mattis sodales nibh quis pellentesque. Nunc posuere porta
+          maximus. Praesent pharetra rutrum pellentesque. Duis venenatis imperdiet dictum. Nullam posuere eu ligula ac
+          venenatis. Integer maximus id elit sed aliquam. Quisque hendrerit nunc molestie mauris molestie
+          aliquam. Nulla eu lectus et augue tincidunt dapibus eu vitae tortor. Duis mi justo, consectetur at tortor at,
+          mollis laoreet leo. Pellentesque id mauris eget est consequat rutrum ac id justo. Mauris quis mattis
+          nunc. Nulla dictum tellus vitae aliquam efficitur. Cras viverra convallis consequat.</p>
+      </div>
+    </div>
+  </div>
+
+  {% include 'footerLayout.html' %}
+</body>
+
+</html>

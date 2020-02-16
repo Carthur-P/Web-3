@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
+
+  <!-- Custom CSS File -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/customCSS.css') }}">
+
+  <!-- JQuery Libary -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+
+  <!-- Custom url variable -->
+  <script>
+    var url = "{{url_for('getCountry')}}";
+  </script>
+
+  <!-- Custom JS File -->
+  <script src="{{ url_for('static', filename='js/customJS.js') }}"></script>
+
+  <title>{{ title }}</title>
+</head>
+
+<body>
+  {% include 'headerLayout.html' %}
+
+  <div id='content' class='container-fluid bg-white w-75 py-4 px-4 mt-n2'>
+    <div class='row'>
+      <div class='col-lg-4 col-sm-auto col-auto mb-3'>
+        <div class="card h-100">
+          <img src="{{ url_for('static', filename='image/inspiration1.jpg') }}" class="card-img-top" alt="Website Image">
+          <div class="card-body">
+            <h5 class="card-title">Otago Polytechnic Website</h5>
+            <p class="card-text">Grid style website that contains clickable panels used for navigation and infomation
+              displaying</p>
+            <a href="https://www.op.ac.nz/hub/" class="btn btn-dark mt-4">Visit</a>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-lg-4 col-sm-auto col-auto mb-3'>
+        <div class="card h-100">
+          <img src="{{ url_for('static', filename='image/inspiration2.jpg') }}" class="card-img-top" alt="Website Image">
+          <div class="card-body">
+            <h5 class="card-title">Seattle Cider Company Website</h5>
+            <p class="card-text">One page scrolling website with the navigation bar always showing used to jump to
+              different section of the site</p>
+            <a href="https://www.seattlecidercompany.com/" class="btn btn-dark">Visit</a>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-lg-4 col-sm-auto col-auto mb-3'>
+        <div class="card h-100">
+          <img src="{{ url_for('static', filename='image/inspiration3.jpg') }}" class="card-img-top" alt="Website Image">
+          <div class="card-body">
+            <h5 class="card-title">Inspirit Clock Online Store Website</h5>
+            <p class="card-text">Website containing large images and minimal typograhpy to showcase the image of the
+              products</p>
+            <a href="https://inspiritcollections.com/" class="btn btn-dark mt-4">Visit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% include 'footerLayout.html' %}
+</body>
+
+</html>

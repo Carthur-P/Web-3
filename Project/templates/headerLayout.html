@@ -1,0 +1,30 @@
+<!-- Header -->
+<div class='mx-auto mt-4 py-4 text-center align-middle bg-secondary text-white w-75 h-100'>
+    <h1 id='header'>Web 3</h1>
+    <h3 id='subheader'><small>IN712 - Project website</small></h3>
+</div>
+
+<!-- Navbar -->
+{% set pages = [["Home" , "index"], ["Inspiration" , "inspiration"], ["Load Data" , "loadData"], ["Show Graph", "showGraph"]] %}
+
+<div class='mx-auto w-75'>
+    <nav class="navbar-expand-lg navbar-dark bg-dark py-2 px-2 h5 font-weight-normal">
+        <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class='collapse navbar-collapse' id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                {% for p in pages %}
+                <li class="nav-item">
+                    {% if p[1] == name %}
+                    <a class="nav-link active" href="{{ url_for(p[1]) }}">{{p[0]}}</a>
+                    {% else %}
+                    <a class="nav-link" href="{{ url_for(p[1]) }}">{{p[0]}}</a>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </nav>
+</div>

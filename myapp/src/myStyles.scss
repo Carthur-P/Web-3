@@ -1,0 +1,46 @@
+$background: #97D9F8;
+$headerBackground: #4F4F4F;
+$whiteText: #FFFFFF;
+
+body{
+    margin-top: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: $background;
+}
+
+.header{
+    background-color: #4F4F4F;
+    color: $whiteText;
+    padding: 20px;
+    text-align: center;
+}
+
+.content{
+    padding: 20px;
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+footer{
+    padding: 10px;
+    text-align: center;
+    margin-top: 0px;
+    background-color: $headerBackground;
+    color: $whiteText;
+}
+
+#countryName{
+    margin: 10px;
+    padding: 10px;
+}
+
+#dataYears{
+    padding: 10px;
+    margin: 10px;
+    margin-left: 0px;
+}
+
+#submitButton{
+    padding: 10px;
+}
